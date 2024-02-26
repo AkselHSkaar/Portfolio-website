@@ -17,10 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang='en'
-      className='bg-primary-light dark:bg-primary-dark text-primary-light dark:text-primary-dark'
-    >
+    <html lang='en'>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -34,11 +31,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} font-sans`}>
+      <body
+        className={`${inter.variable} font-sans bg-primary-light dark:bg-primary-dark text-primary-light dark:text-primary-dark`}
+      >
         <Navbar />
-        <main className='mt-navbar-sm md:mt-navbar-md lg:mt-navbar-lg'>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
