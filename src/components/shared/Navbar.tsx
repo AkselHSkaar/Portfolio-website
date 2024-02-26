@@ -11,8 +11,8 @@ const Navbar = () => {
   const onClose = () => setIsOpen(false)
 
   const stateStyle = {
-    open: 'bg-primary-light/95 dark:bg-primary-dark text-primary-light dark:text-primary-dark h-full',
-    closed: 'text-primary-light dark:text-primary-dark mix-blend-exclusion',
+    open: 'bg-primary-light/95 dark:bg-primary-dark/95 h-full',
+    closed: 'mix-blend-exclusion text-primary-dark',
   }
 
   const style = isOpen ? 'open' : 'closed'
@@ -27,7 +27,7 @@ const Navbar = () => {
           onClick={onClose}
           className='lg:col-span-2 xl:col-span-1'
         >
-          <h1 className=' font-bold'>AKSEL SKAAR! &#8482;</h1>
+          <h1 className='font-bold'>AKSEL SKAAR &#8482;</h1>
         </Link>
         <div className='flex'>
           <p className='cursor-pointer' onClick={onToggle}>
