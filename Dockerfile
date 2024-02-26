@@ -1,20 +1,32 @@
-FROM node:20-alpine
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
+FROM node:20-alpine as builder
 
 WORKDIR /app
 
-COPY pnpm-lock.yaml* package*.json ./
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable && corepack prepare pnpm@latest-8 --activate
+
+COPY package*.json pnpm-lock.yaml* ./
+
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN corepack prepare pnpm@latest-8 --activate
-RUN pnpm install --frozen-lockfile
-
 RUN pnpm run build
 
+# Stage 2: Setup runtime environment
+FROM node:20-alpine
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 ENV PORT=4000
+
+RUN corepack enable && corepack prepare pnpm@latest-8 --activate
+
+WORKDIR /app
+
+COPY --from=builder /app ./
+
 EXPOSE 4000
 
 CMD ["pnpm", "run", "start"]
