@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const stateStyle = {
     open: 'bg-primary-light/95 dark:bg-primary-dark text-primary-light dark:text-primary-dark h-full',
-    closed: 'mix-blend-exclusion text-primary-dark dark:text-primary-light',
+    closed: 'mix-blend-exclusion',
   }
 
   const style = isOpen ? 'open' : 'closed'
