@@ -2,7 +2,7 @@
 
 My portfolio web page, made in [next.js](https://nextjs.org/), deployed to Azure Web App via Azure Container Registry.
 
-Visit the [live site](https://akselskaar.azurewebsites.net/)
+Visit the [live site](https://akselskaar.no/)
 
 ## Project setup
 
