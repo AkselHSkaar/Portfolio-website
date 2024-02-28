@@ -16,3 +16,11 @@ const TextInput = ({ placeholder, value, onChange }: TextInputProps) => {
   )
 }
 export default TextInput
+
+// interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+//   placeholder: string
+// }
+
+// const TextInput: React.FC<TextInputProps> = (props) => {
+//   return <input {...props} />;
+// };
