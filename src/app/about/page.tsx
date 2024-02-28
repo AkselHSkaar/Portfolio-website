@@ -1,12 +1,15 @@
 import Container from '@/components/shared/Container'
-import Hero from './components/Hero'
-import AIchat from './components/AIchat'
+import PageHero from '@/components/PageHero'
+import AIchat from './_components/AIchat'
 
 const page = () => {
   return (
     <>
       <Container>
-        <Hero />
+        <PageHero
+          title='ABOUT ME'
+          text="Skip the mundane bio— I've programmed an AI model with theessentials about me. He has named himself Kjartan. Ask away!"
+        />
         <AIchat />
       </Container>
     </>
