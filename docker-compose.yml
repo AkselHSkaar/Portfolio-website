@@ -5,5 +5,5 @@ services:
     image: akselskaar.azurecr.io/portfolio:latest
     ports:
       - '4000:4000'
-    env_file:
-      - .env
+    environment:
+      - RESEND_API_KEY=${RESEND_API_KEY}
