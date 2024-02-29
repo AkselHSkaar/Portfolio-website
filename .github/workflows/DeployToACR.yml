@@ -1,4 +1,4 @@
-name: Deploy to ACR using Docker Compose
+name: Docker Compose Deploy
 
 on:
   push:
