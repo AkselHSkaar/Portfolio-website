@@ -1,0 +1,28 @@
+name: Deploy to ACR using Docker Compose
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Login to Azure Container Registry
+        run: |
+          echo ${{ secrets.ACR_PASSWORD }} | docker login ${{ secrets.ACR_URL }} -u ${{ secrets.ACR_USERNAME }} --password-stdin
+
+      - name: Build and Push Docker Compose services
+        run: |
+          docker compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml push
+
+      - name: Logout from Azure Container Registry
+        run: docker logout ${{ secrets.ACR_URL }}
