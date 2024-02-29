@@ -1,4 +1,15 @@
+import Container from '@/components/shared/Container'
+import PageHero from '@/components/PageHero'
+import ContactForm from './_components/ContactForm'
+
 const page = () => {
-  return <div>Contact me</div>
+  return (
+    <Container>
+      <PageHero title='CONTACT ME' text='Contact me blblbldjbfdbje' />
+      <main>
+        <ContactForm />
+      </main>
+    </Container>
+  )
 }
 export default page
