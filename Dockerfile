@@ -21,12 +21,11 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 ENV PORT=4000
 
-ENV RESEND_API_KEY=${RESEND_API_KEY}
-
 RUN corepack enable && corepack prepare pnpm@latest-8 --activate
 
 WORKDIR /app
 
+COPY --from=base /.env ./.env
 COPY --from=builder /app ./
 
 EXPOSE 4000
