@@ -3,7 +3,7 @@ services:
   app:
     build: .
     image: akselskaar.azurecr.io/portfolio:latest
-    ports:
-      - '4000:4000'
     environment:
       - RESEND_API_KEY=${RESEND_API_KEY}
+    ports:
+      - '4000:4000'
