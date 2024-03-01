@@ -1,5 +1,7 @@
 FROM node:20-alpine as builder
 
+ARG RESEND_API_KEY
+
 WORKDIR /app
 
 ENV PNPM_HOME="/pnpm"
@@ -20,6 +22,8 @@ FROM node:20-alpine
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 ENV PORT=4000
+
+ENV RESEND_API_KEY=${RESEND_API_KEY}
 
 RUN corepack enable && corepack prepare pnpm@latest-8 --activate
 
