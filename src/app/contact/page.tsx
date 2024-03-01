@@ -5,7 +5,7 @@ import ContactForm from './_components/ContactForm'
 const page = () => {
   return (
     <Container>
-      <PageHero title='CONTACT ME' text='Contact' />
+      <PageHero title='CONTACT ME' text='Contactt' />
       <main>
         <ContactForm />
       </main>
