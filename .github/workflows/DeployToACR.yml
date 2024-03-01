@@ -24,7 +24,7 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
-          echo -e \nRESEND_API_KEY=${{ secrets.RESEND_API_KEY }} >> .env
+          echo -e RESEND_API_KEY=${{ secrets.RESEND_API_KEY }} >> .env
           docker compose -f docker-compose.yml build
           docker compose -f docker-compose.yml push
 
