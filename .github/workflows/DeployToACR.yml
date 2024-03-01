@@ -30,4 +30,3 @@ jobs:
 
       - name: Logout from Azure Container Registry
         run: docker logout ${{ secrets.ACR_URL }}
-# docker compose -f docker-compose.yml build --build-arg RESEND_API_KEY=xxxx
