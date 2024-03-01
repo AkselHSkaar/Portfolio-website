@@ -1,6 +1,6 @@
 'use client'
 
-import { sendEmail } from '@/app/utils/sendemail'
+import { sendEmail } from './sendemail'
 import Button from '@/components/Button'
 import TextInput from '@/components/TextInput'
 
