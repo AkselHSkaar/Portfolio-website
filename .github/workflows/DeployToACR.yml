@@ -21,8 +21,10 @@ jobs:
           echo ${{ secrets.ACR_PASSWORD }} | docker login ${{ secrets.ACR_URL }} -u ${{ secrets.ACR_USERNAME }} --password-stdin
 
       - name: Build and Push Docker Compose services
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
-          export API_KEY=${{ secrets.RESEND_API_KEY }}
+          echo -e \nRESEND_API_KEY=${{ secrets.RESEND_API_KEY }} >> .env
           docker compose -f docker-compose.yml build
           docker compose -f docker-compose.yml push
 

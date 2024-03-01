@@ -1,7 +1,5 @@
 FROM node:20-alpine as builder
 
-ARG RESEND_API_KEY
-
 WORKDIR /app
 
 ENV PNPM_HOME="/pnpm"
@@ -30,6 +28,7 @@ RUN corepack enable && corepack prepare pnpm@latest-8 --activate
 WORKDIR /app
 
 COPY --from=builder /app ./
+COPY --from=builder /.env ./.env
 
 EXPOSE 4000
 
