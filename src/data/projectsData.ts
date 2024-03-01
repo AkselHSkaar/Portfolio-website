@@ -15,7 +15,7 @@ export const ProjectsData: ProjectsTypes[] = [
     slug: 'project-one',
     categories: ['UX/UI-Design', 'Front-end development', 'Webflow CMS'],
     year: '2023',
-    thumbnailImg: '/mock.jpg',
+    thumbnailImg: '/Mock.jpg',
     description:
       'Skyworker was released in 2021 as the fist product by Aboveit. Its a SaaS project management app for small to medium size craftsman companies.',
   },
@@ -25,7 +25,7 @@ export const ProjectsData: ProjectsTypes[] = [
     slug: 'project-two',
     categories: ['UX/UI-Design', 'Front-end development', 'Webflow CMS'],
     year: '2023',
-    thumbnailImg: '/mock.jpg',
+    thumbnailImg: '/Mock.jpg',
     description:
       'Skyworker was released in 2021 as the fist product by Aboveit. Its a SaaS project management app for small to medium size craftsman companies.',
   },
