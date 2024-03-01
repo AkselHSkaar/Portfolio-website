@@ -1,7 +1,10 @@
 version: '3.8'
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        RESEND_API_KEY: ${RESEND_API_KEY}
     image: akselskaar.azurecr.io/portfolio:latest
     ports:
       - '4000:4000'
