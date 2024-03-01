@@ -6,4 +6,4 @@ services:
     ports:
       - '4000:4000'
     environment:
-      - RESEND_API_KEY=${RESEND_API_KEY}
+      - NEXTRESEND_API_KEY=${NEXTRESEND_API_KEY}
