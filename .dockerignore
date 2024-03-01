@@ -6,8 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # dotenv environment variables file
-.env
-.env.test
 .env.local
 
 # Mac files
@@ -22,12 +20,6 @@ yarn-error.log*
 
 # TypeScript cache
 *.tsbuildinfo
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

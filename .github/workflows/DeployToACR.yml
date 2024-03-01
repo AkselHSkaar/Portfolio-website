@@ -22,6 +22,7 @@ jobs:
 
       - name: Build and Push Docker Compose services
         run: |
+          export API_KEY=${{ secrets.RESEND_API_KEY }}
           docker compose -f docker-compose.yml build
           docker compose -f docker-compose.yml push
 

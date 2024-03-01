@@ -26,7 +26,6 @@ RUN corepack enable && corepack prepare pnpm@latest-8 --activate
 WORKDIR /app
 
 COPY --from=builder /app ./
-COPY --from=builder /.env ./.env
 
 EXPOSE 4000
 
