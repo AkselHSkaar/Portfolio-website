@@ -1,6 +1,8 @@
 FROM node:20-alpine as builder
 
+#ENV
 ARG RESEND_API_KEY
+ARG OPENAI_API_KEY
 
 WORKDIR /app
 
@@ -19,8 +21,11 @@ RUN pnpm run build
 # Stage 2: Setup runtime environment
 FROM node:20-alpine
 
+#ENV
 ARG RESEND_API_KEY
+ARG OPENAI_API_KEY
 ENV RESEND_API_KEY=$RESEND_API_KEY
+ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
