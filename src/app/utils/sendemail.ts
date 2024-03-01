@@ -1,6 +1,8 @@
 'use server'
 
+import { unstable_noStore as noStore } from 'next/cache'
 import { Resend } from 'resend'
+noStore()
 
 const resend = new Resend(process.env.NEXTRESEND_API_KEY)
 
