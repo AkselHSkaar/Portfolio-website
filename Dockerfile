@@ -25,7 +25,7 @@ RUN corepack enable && corepack prepare pnpm@latest-8 --activate
 
 WORKDIR /app
 
-COPY --from=base /.env ./.env
+ENV API_KEY=${API_KEY}
 COPY --from=builder /app ./
 
 EXPOSE 4000

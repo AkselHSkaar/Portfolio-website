@@ -4,7 +4,7 @@ import { unstable_noStore as noStore } from 'next/cache'
 import { Resend } from 'resend'
 noStore()
 
-const resend = new Resend(process.env.NEXTRESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendEmail = async (formData: FormData) => {
   const name = formData.get('name')
