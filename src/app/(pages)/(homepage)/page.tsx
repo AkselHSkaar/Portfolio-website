@@ -2,7 +2,7 @@ import Container from '@/components/shared/Container'
 import ArrowLink from '@/components/ArrowLink'
 import Image from 'next/image'
 import { ProjectsData } from '@/data/projectsData'
-import ProjectsItem from './(pages)/(homepage)/ProjectsItem'
+import ProjectsItem from './ProjectsItem'
 
 export default function Home() {
   return (
