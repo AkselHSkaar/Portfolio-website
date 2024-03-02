@@ -30,22 +30,22 @@ export default function Home() {
       {/* About section */}
       <section>
         <Container>
-          <div className='py-section-xs md:py-section-md lg:py-section-lg xl:py-section-xl 2xl:py-section-2xl flex flex-col gap-7'>
-            <h2 className='text-small-regular  md:text-regular-regular lg:text-medium-regular xl:text-medium-regular 2xl:text-xlarge-regular'>
+          <div className='py-section-xs md:py-section-md lg:py-section-lg xl:py-section-xl 2xl:py-section-2xl flex flex-col gap-7 lg:grid lg:grid-cols-8 lg:gap-7'>
+            <h2 className='text-small-regular md:text-regular-regular lg:text-medium-regular xl:text-medium-regular 2xl:text-xlarge-regular col-span-2'>
               (ABOUT ME)
             </h2>
-            <div className='flex flex-col gap-5 lg:gap-11 text-gray-500 dark:text-gray-200'>
+            <div className='col-span-5 flex flex-col gap-5 lg:gap-11 text-gray-500 dark:text-gray-200'>
               <p>
                 I have a bacehlors degree in technology & interaction design for
                 Kristiania University College (2022). While studying i also
                 worked as a freelance UX/UI designer.
               </p>
-              <p>
+              <p className='mb-7 lg:mb-11'>
                 When i`m not working with design or tech, i play guitar and
                 produce music, go fishing or hang out with friends.
               </p>
+              <ArrowLink href='/'>WHAT IM LISTENING TO</ArrowLink>
             </div>
-            <ArrowLink href='/'>WHAT IM LISTENING TO</ArrowLink>
           </div>
         </Container>
       </section>
