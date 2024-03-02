@@ -22,7 +22,7 @@ const ProjectsItem = ({ data }: ProjectsItemProps) => {
         <div className='relative col-span-2 md:col-span-3 lg:col-span-8 md:row-start-1 aspect-video'>
           <Image src={data.thumbnailImg} alt='image' fill={true} />
         </div>
-        <header className='col-span-2 md:col-span-1 lg:col-span-2 flex md:flex-col justify-between md:justify-start row-start-1 md:row-start-2 text-xsmall-regular md:text-small-regular lg:text-regular-regular xl:text-medium-regular 2xl:text-large-regular'>
+        <header className='col-span-2 md:col-span-1 lg:col-span-2 flex md:flex-col justify-between md:justify-start row-start-1 md:row-start-2 text-xsmall-regular md:text-small-regular lg:text-regular-regular xl:text-medium-regular 2xl:text-large-regular md:gap-3'>
           <p className=''>
             0{data.id} - {data.title}
           </p>
