@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/shared/Navbar'
@@ -29,6 +30,11 @@ export default function RootLayout({
               }
         `,
           }}
+        />
+        <Script
+          defer
+          data-domain='akselskaar.no'
+          src='https://plausible.io/js/script.js'
         />
       </head>
       <body
