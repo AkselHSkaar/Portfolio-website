@@ -32,10 +32,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} font-sans bg-primary-light dark:bg-primary-dark text-primary-light dark:text-primary-dark`}
+        className={`${inter.variable} font-sans bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-50 text-small-thin md:text-regular-thin lg:text-large-thin xl:text-xlarge-thin 2xl:text-huge-thin`}
       >
         <Navbar />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
