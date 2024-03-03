@@ -28,13 +28,13 @@ function ContactEmail({ name, senderEmail, message }: ContactEmailProps) {
             <Heading className='text-h1'>Ny melding fra {name}</Heading>
             <Hr />
             <Section>
-              <Text>
+              <Text className='text-regular-regular'>
                 Medlingen er fra: {name}, {senderEmail}
               </Text>
             </Section>
             <Hr />
-            <Section className='p-5 bg-gray-100'>
-              <Text>På meldingen står det:</Text>
+            <Text className='text-regular-regular'>På meldingen står det:</Text>
+            <Section className='p-5 bg-gray-100 text-medium-thin'>
               <Text>{message}</Text>
             </Section>
           </Container>
