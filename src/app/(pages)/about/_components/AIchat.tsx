@@ -4,10 +4,55 @@ import { useChat } from 'ai/react'
 
 const AIchat = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
+
+  const noMessages = true
+
   return (
-    <div className='my-13'>
-      <div className='border border-gray-200 px-7 py-5 h-[60svh] overflow-auto flex flex-col'>
-        <div className='grow flex flex-col gap-4'>
+    <section className='h-[87svh] mb-7'>
+      <div className='h-full flex grow'>
+        {noMessages && (
+          <div className='flex flex-col grow justify-between pb-4'>
+            <div className='flex grow'>
+              <p className='text-center self-center text-gray-500'>
+                Skip the boring bio— Ive programmed an AI model with the
+                essentials about me. Ask whatever you want!
+              </p>
+            </div>
+            <div className='flex gap-3'>
+              <button className='p-3 border border-gray-200 text-xsmall-thin'>
+                What projects has Aksel worked on the last year?
+              </button>
+              <button className='p-3 border border-gray-200 text-xsmall-thin'>
+                What projects has Aksel worked on the last year?
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+      <form onSubmit={handleSubmit}>
+        <div className='flex w-full gap-4'>
+          <input
+            className='bg-primary-light border border-gray-900 grow p-4 text-small-thin focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            value={input}
+            placeholder='What is Aksels favourite food?'
+            onChange={handleInputChange}
+          />
+          <input
+            type='submit'
+            value='Send'
+            className='bg-primary-light border border-gray-900 p-4 text-small-thin hover:bg-gray-800 hover:text-gray-50 transition-all duration-300 ease-in-out'
+          />
+        </div>
+      </form>
+    </section>
+  )
+}
+export default AIchat
+
+{
+  /*
+      <div className='px-7 py-5 h-[60svh] overflow-auto flex flex-col'>
+         <div className='grow flex flex-col gap-4'>
           {messages.map((m) => (
             <div
               key={m.id}
@@ -28,24 +73,5 @@ const AIchat = () => {
               )}
             </div>
           ))}
-        </div>
-        <form onSubmit={handleSubmit}>
-          <div className='flex w-full gap-4'>
-            <input
-              className='bg-primary-light border border-gray-900 grow p-4 text-small-thin focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
-              value={input}
-              placeholder='What is Aksels favourite food?'
-              onChange={handleInputChange}
-            />
-            <input
-              type='submit'
-              value='Send'
-              className='bg-primary-light border border-gray-900 p-4 text-small-thin hover:bg-gray-800 hover:text-gray-50 transition-all duration-300 ease-in-out'
-            />
-          </div>
-        </form>
-      </div>
-    </div>
-  )
+        </div> */
 }
-export default AIchat
