@@ -1,11 +1,11 @@
 import Container from '@/components/shared/Container'
-import PageHero from '@/components/PageHero'
+import PageHeader from '@/components/PageHeader'
 import ContactForm from './_components/ContactForm'
 
 const page = () => {
   return (
     <Container>
-      <PageHero title='CONTACT ME' text='Contactt' />
+      <PageHeader title='CONTACT ME' />
       <main>
         <ContactForm />
       </main>
