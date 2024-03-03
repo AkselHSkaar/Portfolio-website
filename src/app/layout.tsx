@@ -41,7 +41,9 @@ export default function RootLayout({
         className={`${inter.variable} font-sans bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-50 text-small-thin md:text-regular-thin lg:text-large-thin xl:text-xlarge-thin 2xl:text-huge-thin`}
       >
         <Navbar />
-        {children}
+        <main className='mt-navbar-sm md:mt-navbar-md lg:mt-navbar-lg'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
