@@ -1,8 +1,14 @@
+'use client'
+
 import Link from 'next/link'
 import Container from './Container'
-import ArrowLink from '../ArrowLink'
+import ArrowButton from '../ArrowButton'
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <footer className='pt-19 md:pt-21 lg:pt-23 xl:pt-27'>
       <Container>
@@ -10,9 +16,9 @@ const Footer = () => {
           <h1 className='text-h6 sm:text-h5 md:text-h4 lg:text-h3 xl:text-h2 2xl:text-h1'>
             AKSEL SKAAR
           </h1>
-          <ArrowLink href='/' direction='up'>
+          <ArrowButton type='function' onClick={scrollToTop} direction='up'>
             BACK TO TOP
-          </ArrowLink>
+          </ArrowButton>
         </div>
         <div className='py-11 gap-7 border-t border-gray-200 dark:border-gray-300'>
           <div className='grid grid-auto-rows grid-cols-2 justify-between lg:grid-cols-7 lg:gap-7 xl:grid-cols-8'>
