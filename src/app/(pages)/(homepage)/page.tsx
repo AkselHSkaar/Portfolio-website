@@ -6,7 +6,7 @@ import ProjectsItem from './ProjectsItem'
 
 export default function Home() {
   return (
-    <main className='mt-navbar-sm md:mt-navbar-md lg:mt-navbar-lg'>
+    <>
       <header className='py-section-xs md:py-section-md lg:py-section-lg xl:py-section-xl 2xl:py-section-2xl'>
         <Container>
           <div className='flex flex-col gap-9 md:gap-11 xl:gap-14 2xl:gap-16'>
@@ -68,6 +68,6 @@ export default function Home() {
           </div>
         </Container>
       </section>
-    </main>
+    </>
   )
 }
