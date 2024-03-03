@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import ThemeSwitch from './ThemeSwitch'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   const onToggle = () => setIsOpen(!isOpen)
   const onClose = () => setIsOpen(false)
@@ -37,14 +39,22 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className='my-15 flex flex-col justify-between md:justify-normal h-full md:grid md:grid-cols-3 md:gap-7 lg:grid-cols-8 xl:grid-cols-4'>
-          <div className='flex flex-col gap-7 md:col-start-2 md:row-start-1 md:col-span-2 lg:col-start-3 xl:col-start-2'>
+          <div className='flex flex-col gap-7 md:col-start-2 md:row-start-1 md:col-span-2 lg:col-start-3 xl:col-start-2 text-gray-400'>
             <div className='flex'>
-              <Link href='/about' onClick={onClose}>
+              <Link
+                href='/about'
+                onClick={onClose}
+                className={`${pathname === '/about' && 'text-gray-800'}`}
+              >
                 About me
               </Link>
             </div>
             <div className='flex'>
-              <Link href='/contact' onClick={onClose} className='flex'>
+              <Link
+                href='/contact'
+                onClick={onClose}
+                className={`${pathname === '/contact' && 'text-gray-800'} flex`}
+              >
                 Contact me
               </Link>
             </div>
