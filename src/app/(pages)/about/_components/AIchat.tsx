@@ -1,6 +1,8 @@
 'use client'
 
 import { useChat } from 'ai/react'
+import Input from '@/components/Input'
+import SendIcon from '@/components/icons/SendIcon'
 
 const AIchat = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
@@ -8,17 +10,17 @@ const AIchat = () => {
   const noMessages = true
 
   return (
-    <section className='h-[87svh] mb-7'>
+    <section className='h-[90svh] mb-7'>
       <div className='h-full flex grow'>
         {noMessages && (
           <div className='flex flex-col grow justify-between pb-4'>
-            <div className='flex grow'>
-              <p className='text-center self-center text-gray-500'>
+            <div className='flex grow justify-center'>
+              <p className='text-center self-center text-gray-500 max-w-[70%]'>
                 Skip the boring bio— Ive programmed an AI model with the
                 essentials about me. Ask whatever you want!
               </p>
             </div>
-            <div className='flex gap-3'>
+            <div className='flex gap-3 text-left'>
               <button className='p-3 border border-gray-200 text-xsmall-thin'>
                 What projects has Aksel worked on the last year?
               </button>
@@ -31,12 +33,12 @@ const AIchat = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className='flex w-full gap-4'>
-          <input
-            className='bg-primary-light border border-gray-900 grow p-4 text-small-thin focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+          <Input
             value={input}
             placeholder='What is Aksels favourite food?'
             onChange={handleInputChange}
           />
+
           <input
             type='submit'
             value='Send'
