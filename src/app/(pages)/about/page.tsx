@@ -6,10 +6,6 @@ const page = () => {
   return (
     <>
       <Container>
-        <PageHeader
-          title='ABOUT ME'
-          text="Skip the mundane bio— I've programmed an AI assistant with the essentials about me. He has named himself Kjartan. Ask away!"
-        />
         <AIchat />
       </Container>
     </>
