@@ -1,5 +1,5 @@
 import Container from '@/components/shared/Container'
-import ArrowLink from '@/components/ArrowLink'
+import ArrowButton from '@/components/ArrowButton'
 import Image from 'next/image'
 import { ProjectsData } from '@/data/projectsData'
 import ProjectsItem from './ProjectsItem'
@@ -19,7 +19,9 @@ export default function Home() {
                 currently working at Aboveit.
               </p>
             </div>
-            <ArrowLink href='/contact'>CONTACT ME</ArrowLink>
+            <ArrowButton type='link' href='/contact'>
+              CONTACT ME
+            </ArrowButton>
           </div>
         </Container>
       </header>
@@ -44,7 +46,13 @@ export default function Home() {
                 When i`m not working with design or tech, i play guitar and
                 produce music, go fishing or hang out with friends.
               </p>
-              <ArrowLink href='/'>WHAT IM LISTENING TO</ArrowLink>
+              <ArrowButton
+                type='link'
+                href='https://open.spotify.com/playlist/2YnEuuOS6ehzCp3XjdSOj3?si=6a6d4d7905dc48a3'
+                external
+              >
+                WHAT IM LISTENING TO
+              </ArrowButton>
             </div>
           </div>
         </Container>
