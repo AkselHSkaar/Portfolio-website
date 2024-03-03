@@ -2,7 +2,7 @@
 
 import { sendEmail } from './sendemail'
 import Button from '@/components/Button'
-import TextInput from '@/components/TextInput'
+import Input from '@/components/Input'
 
 const ContactForm = () => {
   return (
@@ -12,9 +12,14 @@ const ContactForm = () => {
       }}
       className='flex flex-col gap-7'
     >
-      <TextInput name='name' placeholder='Fullt navn' />
-      <TextInput name='senderEmail' placeholder='Epost' />
-      <TextInput name='message' placeholder='Meldingen din..' />
+      <Input name='name' type='text' placeholder='Fullt navn' required />
+      <Input name='senderEmail' type='email' placeholder='Epost' required />
+      <Input
+        name='message'
+        type='text'
+        placeholder='Meldingen din..'
+        required
+      />
       <Button type='submit'>Send</Button>
     </form>
   )
