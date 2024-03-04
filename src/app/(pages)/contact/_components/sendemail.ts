@@ -3,6 +3,7 @@
 import { Resend } from 'resend'
 import ContactEmail from '@/email/ContactEmail'
 import React from 'react'
+import { revalidatePath } from 'next/cache'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -23,7 +24,15 @@ export const sendEmail = async (formData: FormData) => {
         message: message as string,
       }),
     })
-  } catch (error: unknown) {
-    console.log(error)
+    return {
+      feedback:
+        'Takk for din henvendelse! Vi tar kontakt med deg så snart som mulig.',
+    }
+
+    revalidatePath('/')
+  } catch (e) {
+    return {
+      feedback: 'Noe gikk galt. Vennligst prøv igjen senere.',
+    }
   }
 }

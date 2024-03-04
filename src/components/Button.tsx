@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
+import { useFormStatus } from 'react-dom'
 
 type ButtonProps = {
   type?: 'link' | 'submit' | 'function'
@@ -14,6 +15,7 @@ type ButtonProps = {
   iconStart?: JSX.Element
   iconEnd?: JSX.Element
   ref?: React.Ref<any>
+  pendingMessage?: string
 }
 
 const variants = {
@@ -62,14 +64,22 @@ function SubmitButton({
   iconStart,
   iconEnd,
   ref,
+  pendingMessage,
 }: ButtonProps & { style?: string }) {
+  const { pending } = useFormStatus()
   return (
     <button className={style} type='submit' ref={ref}>
-      {iconStart &&
-        React.cloneElement(iconStart, { className: 'size-7 fill-gray-50' })}
-      {children}
-      {iconEnd &&
-        React.cloneElement(iconEnd, { className: 'size-7 fill-gray-50' })}
+      {pending ? (
+        `${pendingMessage}`
+      ) : (
+        <>
+          {iconStart &&
+            React.cloneElement(iconStart, { className: 'size-7 fill-gray-50' })}
+          {children}
+          {iconEnd &&
+            React.cloneElement(iconEnd, { className: 'size-7 fill-gray-50' })}
+        </>
+      )}
     </button>
   )
 }
@@ -105,6 +115,7 @@ export default function Button({
   iconStart,
   iconEnd,
   ref,
+  pendingMessage,
 }: ButtonProps) {
   let buttonStyle = `text-rg-medium flex justify-center gap-5 ${
     isSmall ? sizes.small : sizes.big
@@ -128,6 +139,7 @@ export default function Button({
         iconStart={iconStart}
         iconEnd={iconEnd}
         ref={ref}
+        pendingMessage={pendingMessage}
       >
         <p className='whitespace-nowrap'>{children}</p>
       </SubmitButton>
