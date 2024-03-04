@@ -1,4 +1,5 @@
 import React from 'react'
+import InputWrapper from './InputWrapper'
 
 type InputProps = {
   name?: string
@@ -17,13 +18,14 @@ const Input = ({
   type = 'text',
   value,
   required,
+  label,
   placeholder,
   onChange,
   iconLeft,
   iconRight,
 }: InputProps) => {
   return (
-    <span className='relative bg-primary-light w-full'>
+    <InputWrapper label={label} iconLeft={iconLeft} iconRight={iconRight}>
       <input
         name={name}
         type={type}
@@ -36,17 +38,7 @@ const Input = ({
         {...(required ? { required } : {})}
         {...(iconLeft ? { backgrondImage: iconLeft } : {})}
       />
-      {iconLeft && (
-        <span className='absolute left-4 top-4 bottom-4'>
-          {React.cloneElement(iconLeft, { className: 'size-[20px]' })}
-        </span>
-      )}
-      {iconRight && (
-        <span className='absolute right-4 top-4 bottom-4'>
-          {React.cloneElement(iconRight, { className: 'size-[20px]' })}
-        </span>
-      )}
-    </span>
+    </InputWrapper>
   )
 }
 export default Input
