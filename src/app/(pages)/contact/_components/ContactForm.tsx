@@ -2,7 +2,8 @@
 
 import { sendEmail } from './sendemail'
 import Button from '@/components/Button'
-import Input from '@/components/Input'
+import TextInput from '@/components/Input/TextInput'
+import TextArea from '@/components/Input/TextArea'
 import { useRef, useState } from 'react'
 
 const ContactForm = () => {
@@ -19,15 +20,27 @@ const ContactForm = () => {
       }}
       className='flex flex-col gap-7'
     >
-      <Input name='name' type='text' placeholder='Fullt navn' required />
-      <Input name='senderEmail' type='email' placeholder='Epost' required />
-      <Input
-        name='message'
+      <TextInput
+        name='name'
+        label='Fullt navn'
         type='text'
+        placeholder='Fullt navn'
+        required
+      />
+      <TextInput
+        name='senderEmail'
+        label='Epost'
+        type='email'
+        placeholder='Epost'
+        required
+      />
+      <TextArea
+        name='message'
+        label='Melding'
         placeholder='Meldingen din..'
         required
       />
-      {feedback && <span className='text-rg-bold'>{feedback}</span>}
+      {feedback && <span className='text-small-regular'>{feedback}</span>}
       <Button type='submit' pendingMessage='Sender...'>
         Send
       </Button>

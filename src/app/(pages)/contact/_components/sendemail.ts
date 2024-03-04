@@ -25,8 +25,7 @@ export const sendEmail = async (formData: FormData) => {
       }),
     })
     return {
-      feedback:
-        'Takk for din henvendelse! Vi tar kontakt med deg så snart som mulig.',
+      feedback: 'Takk for din henvendelse! Jeg svarer deg så fort jeg kan.',
     }
 
     revalidatePath('/')
