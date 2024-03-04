@@ -1,7 +1,7 @@
 'use client'
 
 import { useChat } from 'ai/react'
-import Input from '@/components/Input'
+import TextInput from '@/components/Input/TextInput'
 import SendIcon from '@/components/icons/SendIcon'
 
 const AIchat = () => {
@@ -33,7 +33,7 @@ const AIchat = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className='flex w-full gap-4'>
-          <Input
+          <TextInput
             value={input}
             placeholder='What is Aksels favourite food?'
             onChange={handleInputChange}
