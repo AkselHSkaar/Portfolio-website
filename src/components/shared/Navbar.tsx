@@ -29,7 +29,7 @@ const Navbar = () => {
           onClick={onClose}
           className='lg:col-span-2 xl:col-span-1'
         >
-          <h1 className='font-bold'>AKSEL SKAAR &#8482;</h1>
+          <h1 className='font-bold'>AKSEL SKAAR</h1>
         </Link>
         <div className='flex'>
           <p className='cursor-pointer' onClick={onToggle}>
