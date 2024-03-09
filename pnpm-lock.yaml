@@ -29,6 +29,9 @@ dependencies:
   resend:
     specifier: ^3.2.0
     version: 3.2.0
+  zod:
+    specifier: ^3.22.4
+    version: 3.22.4
 
 devDependencies:
   '@types/node':
