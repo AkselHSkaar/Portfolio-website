@@ -7,7 +7,7 @@ import { revalidatePath } from 'next/cache'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export const sendEmail = async (formData: FormData) => {
+export const sendEmailAction = async (formData: FormData) => {
   const name = formData.get('name')
   const senderEmail = formData.get('senderEmail')
   const message = formData.get('message')

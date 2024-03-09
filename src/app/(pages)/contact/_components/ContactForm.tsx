@@ -1,6 +1,6 @@
 'use client'
 
-import { sendEmail } from './sendemail'
+import { sendEmailAction } from './actions'
 import Button from '@/components/Button'
 import TextInput from '@/components/Input/TextInput'
 import TextArea from '@/components/Input/TextArea'
@@ -15,7 +15,7 @@ const ContactForm = () => {
       ref={ref}
       action={async (formData) => {
         ref.current?.reset()
-        const { feedback } = await sendEmail(formData)
+        const { feedback } = await sendEmailAction(formData)
         setFeedback(feedback)
       }}
       className='flex flex-col gap-7'
