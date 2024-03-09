@@ -1,7 +1,7 @@
 'use server'
 
 import { Resend } from 'resend'
-import ContactEmail from '@/email/ContactEmail'
+import ContactEmail from '../../../../../email/ContactEmail'
 import React from 'react'
 import { revalidatePath } from 'next/cache'
 
