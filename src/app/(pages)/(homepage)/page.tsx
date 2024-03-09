@@ -2,7 +2,7 @@ import Container from '@/components/shared/Container'
 import ArrowButton from '@/components/ArrowButton'
 import Image from 'next/image'
 import { ProjectsData } from '@/data/projectsData'
-import ProjectsItem from './ProjectsItem'
+import ProjectsItem from './_components/ProjectsItem'
 
 export default function Home() {
   return (
