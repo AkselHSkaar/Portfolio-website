@@ -15,6 +15,7 @@ const NewContactForm = () => {
     formState: { errors, isSubmitting },
     trigger,
     getValues,
+    reset,
   } = useForm<TContactFormSchema>({
     resolver: zodResolver(contactFormSchema),
   })
@@ -27,6 +28,8 @@ const NewContactForm = () => {
 
         const email = getValues()
         await sendEmailAction(email)
+
+        reset()
       }}
     >
       <div className='flex flex-col gap-7'>
