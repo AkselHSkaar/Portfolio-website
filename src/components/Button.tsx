@@ -16,6 +16,7 @@ type ButtonProps = {
   iconEnd?: JSX.Element
   ref?: React.Ref<any>
   pendingMessage?: string
+  className?: string
 }
 
 const variants = {
@@ -28,7 +29,7 @@ const variants = {
 }
 
 const sizes = {
-  big: 'px-7 py-6',
+  big: 'px-7 py-4',
   small: 'px-6 py-3',
 }
 
@@ -116,10 +117,13 @@ export default function Button({
   iconEnd,
   ref,
   pendingMessage,
+  className,
 }: ButtonProps) {
-  let buttonStyle = `text-rg-medium flex justify-center gap-5 ${
+  let buttonStyle = `flex justify-center gap-5 ${
     isSmall ? sizes.small : sizes.big
-  } ${variants[variant]} ${isFullWidth ? width.full : width.content}`
+  } ${variants[variant]} ${
+    isFullWidth ? width.full : width.content
+  } ${className}`
   if (type === 'link') {
     return (
       <LinkButton
@@ -129,7 +133,7 @@ export default function Button({
         iconEnd={iconEnd}
         ref={ref}
       >
-        <p className='whitespace-nowrap'>{children}</p>
+        <p className='whitespace-nowrap text-xsmall-thin'>{children}</p>
       </LinkButton>
     )
   } else if (type === 'submit') {
@@ -141,7 +145,7 @@ export default function Button({
         ref={ref}
         pendingMessage={pendingMessage}
       >
-        <p className='whitespace-nowrap'>{children}</p>
+        <p className='whitespace-nowrap text-xsmall-thin'>{children}</p>
       </SubmitButton>
     )
   } else if (type === 'function') {
@@ -153,7 +157,7 @@ export default function Button({
         onClick={onClick}
         ref={ref}
       >
-        <p className='whitespace-nowrap'>{children}</p>
+        <p className='whitespace-nowrap text-xsmall-thin'>{children}</p>
       </FunctionButton>
     )
   }

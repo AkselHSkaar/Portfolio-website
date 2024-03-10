@@ -38,13 +38,15 @@ const NewContactForm = () => {
           reset()
         }
       }}
+      className='lg:col-span-5 xl:col-span-2'
     >
       <div className='flex flex-col gap-7'>
         <label className='flex flex-col gap-3'>
-          <span className='text-small-thin'>Fullt navn test</span>
+          <span className='text-small-thin'>Full name</span>
           <input
             {...register('name')}
             className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            placeholder='Enter your name'
           />
         </label>
 
@@ -53,10 +55,11 @@ const NewContactForm = () => {
         )}
 
         <label className='flex flex-col gap-3'>
-          <span className='text-small-thin'>E-post</span>
+          <span className='text-small-thin'>E-mail</span>
           <input
             {...register('senderEmail')}
             className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            placeholder='Enter your e-mail'
           />
         </label>
 
@@ -65,11 +68,12 @@ const NewContactForm = () => {
         )}
 
         <label className='flex flex-col gap-3'>
-          <span className='text-small-thin'>Melding</span>
+          <span className='text-small-thin'>Your message</span>
           <textarea
             {...register('message')}
             rows={4}
             className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            placeholder='Your message...'
           />
         </label>
 
@@ -81,9 +85,9 @@ const NewContactForm = () => {
           <p className='text-small-thin'>{feedbackMessage}</p>
         )}
 
-        <button type='submit' disabled={isSubmitting} className='self-start'>
-          send
-        </button>
+        <Button type='submit' className='self-end'>
+          Send
+        </Button>
       </div>
     </form>
   )
