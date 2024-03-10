@@ -1,14 +1,14 @@
 'use client'
 
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { sendEmailAction } from '@/actions/actions'
+import { useState } from 'react'
 import Button from '@/components/Button'
 import {
   contactFormSchema,
   TContactFormSchema,
 } from '@/schemas/contactFormSchema'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from 'react'
 
 const NewContactForm = () => {
   const {
@@ -26,14 +26,18 @@ const NewContactForm = () => {
   return (
     <form
       action={async () => {
+        // Trigger to validate the form
         const result = await trigger()
         if (!result) return
 
+        // Get form values and send to server action
         const contactSubmission = getValues()
         const feedbackMessage = await sendEmailAction(contactSubmission)
 
+        // Set the feedback message from the server
         setFeedbackMessage(feedbackMessage.message)
 
+        // Reset the form if the server response is successful
         if (feedbackMessage.reset) {
           reset()
         }
@@ -88,7 +92,6 @@ const NewContactForm = () => {
           <p className='text-small-thin'>{feedbackMessage}</p>
         )}
 
-        {/* TODOO: Add submitting state  */}
         <Button type='submit' pendingMessage='Sender..' className='self-end'>
           Send
         </Button>
