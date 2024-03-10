@@ -2,14 +2,24 @@
 
 import React from 'react'
 import { Resend } from 'resend'
-import { TContactFormSchema } from '@/schemas/contactFormSchema'
+import {
+  contactFormSchema,
+  TContactFormSchema,
+} from '@/schemas/contactFormSchema'
 import ContactEmail from '../../email/ContactEmail'
-import { revalidatePath } from 'next/cache'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendEmailAction = async (email: TContactFormSchema) => {
-  const { name, senderEmail, message } = email
+  const validatedEmail = contactFormSchema.safeParse(email)
+
+  if (!validatedEmail.success) {
+    return {
+      message: 'Invalid email',
+    }
+  }
+
+  const { name, senderEmail, message } = validatedEmail.data
 
   try {
     await resend.emails.send({
@@ -24,13 +34,14 @@ export const sendEmailAction = async (email: TContactFormSchema) => {
       }),
     })
     return {
-      message: 'Takk for din henvendelse! Jeg svarer deg så fort jeg kan.',
+      message:
+        'Thank you for your message. I will get back to you as soon as possible.',
+      reset: true,
     }
-
-    revalidatePath('/')
   } catch (e) {
     return {
-      message: 'Noe gikk galt. Vennligst prøv igjen senere.',
+      message: 'Something went wrong. Please try again later.',
+      reset: false,
     }
   }
 }

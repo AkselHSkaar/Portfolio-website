@@ -8,6 +8,7 @@ import {
 } from '@/schemas/contactFormSchema'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useState } from 'react'
 
 const NewContactForm = () => {
   const {
@@ -20,16 +21,22 @@ const NewContactForm = () => {
     resolver: zodResolver(contactFormSchema),
   })
 
+  const [feedbackMessage, setFeedbackMessage] = useState<string>()
+
   return (
     <form
       action={async () => {
         const result = await trigger()
         if (!result) return
 
-        const email = getValues()
-        await sendEmailAction(email)
+        const contactSubmission = getValues()
+        const feedbackMessage = await sendEmailAction(contactSubmission)
 
-        reset()
+        setFeedbackMessage(feedbackMessage.message)
+
+        if (feedbackMessage.reset) {
+          reset()
+        }
       }}
     >
       <div className='flex flex-col gap-7'>
@@ -68,6 +75,10 @@ const NewContactForm = () => {
 
         {errors.message && (
           <p className='text-small-thin'>{`${errors.message.message}`}</p>
+        )}
+
+        {feedbackMessage && (
+          <p className='text-small-thin'>{feedbackMessage}</p>
         )}
 
         <button type='submit' disabled={isSubmitting} className='self-start'>
