@@ -75,7 +75,7 @@ const NewContactForm = () => {
             <textarea
               {...register('message')}
               rows={4}
-              className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+              className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out resize-none'
             />
           </label>
 
