@@ -10,20 +10,23 @@ import ContactEmail from '../../email/ContactEmail'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export const sendEmailAction = async (email: TContactFormSchema) => {
-  const validatedEmail = contactFormSchema.safeParse(email)
+export const sendEmailAction = async (
+  contactSubmission: TContactFormSchema
+) => {
+  const validatedContactSubmission =
+    contactFormSchema.safeParse(contactSubmission)
 
-  if (!validatedEmail.success) {
+  if (!validatedContactSubmission.success) {
     return {
       message: 'Invalid email',
     }
   }
 
-  const { name, senderEmail, message } = validatedEmail.data
+  const { name, senderEmail, message } = validatedContactSubmission.data
 
   try {
     await resend.emails.send({
-      from: `Ny melding fra ${name} <onboarding@resend.dev>`,
+      from: `Ny melding fra ${name} <hei@akselskaar.no>`,
       to: 'akselhskaar@hotmail.no',
       subject: `Ny melding fra kontakt skjema på akselskaar.no`,
       reply_to: senderEmail,
