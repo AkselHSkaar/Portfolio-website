@@ -5,7 +5,7 @@ import ArrowRight from './icons/ArrowRight'
 import ArrowUp from './icons/ArrowUp'
 
 const style =
-  'flex gap-3 pb-2 grow-0 text-xsmall-regular md:text-small-regular lg:text-regular-regular xl:text-medium-regular 2xl:text-xlarge-regular border-b border-gray-800 hover:text-gray-500 hover:border-gray-500 dark:border-gray-50 dark:hover:border-gray-200 dark:hover:text-gray-200'
+  'flex gap-3 pb-2 grow-0 text-xsmall-regular md:text-small-regular lg:text-regular-regular xl:text-medium-regular 2xl:text-xlarge-regular border-b border-gray-800 hover:text-gray-500 hover:border-gray-500 dark:border-gray-50 dark:hover:border-gray-200 dark:hover:text-gray-200 text-gray-800 dark:text-gray-50 transition-all duration-100 ease-in-out'
 
 type ArrowButtonProps = {
   type: 'link' | 'function'
