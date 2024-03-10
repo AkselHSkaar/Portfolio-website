@@ -119,7 +119,7 @@ export default function Button({
   pendingMessage,
   className,
 }: ButtonProps) {
-  let buttonStyle = `flex justify-center gap-5 ${
+  let buttonStyle = `flex justify-center gap-5 text-xsmall-thin ${
     isSmall ? sizes.small : sizes.big
   } ${variants[variant]} ${
     isFullWidth ? width.full : width.content
@@ -133,7 +133,7 @@ export default function Button({
         iconEnd={iconEnd}
         ref={ref}
       >
-        <p className='whitespace-nowrap text-xsmall-thin'>{children}</p>
+        <p className='whitespace-nowrap'>{children}</p>
       </LinkButton>
     )
   } else if (type === 'submit') {
@@ -145,7 +145,7 @@ export default function Button({
         ref={ref}
         pendingMessage={pendingMessage}
       >
-        <p className='whitespace-nowrap text-xsmall-thin'>{children}</p>
+        <p className='whitespace-nowrap'>{children}</p>
       </SubmitButton>
     )
   } else if (type === 'function') {
@@ -157,7 +157,7 @@ export default function Button({
         onClick={onClick}
         ref={ref}
       >
-        <p className='whitespace-nowrap text-xsmall-thin'>{children}</p>
+        <p className='whitespace-nowrap'>{children}</p>
       </FunctionButton>
     )
   }

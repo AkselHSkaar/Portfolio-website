@@ -41,51 +41,55 @@ const NewContactForm = () => {
       className='lg:col-span-5 xl:col-span-2'
     >
       <div className='flex flex-col gap-7'>
-        <label className='flex flex-col gap-3'>
-          <span className='text-small-thin'>Full name</span>
-          <input
-            {...register('name')}
-            className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
-            placeholder='Enter your name'
-          />
-        </label>
+        <div className='flex flex-col gap-3'>
+          <label className='flex flex-col gap-3'>
+            <span className='text-small-thin'>Fullt navn test</span>
+            <input
+              {...register('name')}
+              className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            />
+          </label>
 
-        {errors.name && (
-          <p className='text-small-thin'>{`${errors.name.message}`}</p>
-        )}
+          {errors.name && (
+            <p className='text-small-thin'>{`${errors.name.message}`}</p>
+          )}
+        </div>
 
-        <label className='flex flex-col gap-3'>
-          <span className='text-small-thin'>E-mail</span>
-          <input
-            {...register('senderEmail')}
-            className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
-            placeholder='Enter your e-mail'
-          />
-        </label>
+        <div className='flex flex-col gap-7'>
+          <label className='flex flex-col gap-3'>
+            <span className='text-small-thin'>E-post</span>
+            <input
+              {...register('senderEmail')}
+              className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            />
+          </label>
 
-        {errors.senderEmail && (
-          <p className='text-small-thin'>{`${errors.senderEmail.message}`}</p>
-        )}
+          {errors.senderEmail && (
+            <p className='text-small-thin'>{`${errors.senderEmail.message}`}</p>
+          )}
+        </div>
 
-        <label className='flex flex-col gap-3'>
-          <span className='text-small-thin'>Your message</span>
-          <textarea
-            {...register('message')}
-            rows={4}
-            className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
-            placeholder='Your message...'
-          />
-        </label>
+        <div className='flex flex-col gap-7'>
+          <label className='flex flex-col gap-3'>
+            <span className='text-small-thin'>Melding</span>
+            <textarea
+              {...register('message')}
+              rows={4}
+              className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
+            />
+          </label>
 
-        {errors.message && (
-          <p className='text-small-thin'>{`${errors.message.message}`}</p>
-        )}
+          {errors.message && (
+            <p className='text-small-thin'>{`${errors.message.message}`}</p>
+          )}
+        </div>
 
         {feedbackMessage && (
           <p className='text-small-thin'>{feedbackMessage}</p>
         )}
 
-        <Button type='submit' className='self-end'>
+        {/* TODOO: Add submitting state  */}
+        <Button type='submit' pendingMessage='Sender..' className='self-end'>
           Send
         </Button>
       </div>

@@ -1,5 +1,4 @@
 import Container from '@/components/shared/Container'
-import PageHeader from '@/components/PageHeader'
 import ContactForm from './_components/ContactForm'
 
 const page = () => {
