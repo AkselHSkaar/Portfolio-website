@@ -13,7 +13,7 @@ import {
 const NewContactForm = () => {
   const {
     register,
-    formState: { errors, isSubmitting },
+    formState: { errors },
     trigger,
     getValues,
     reset,
@@ -47,9 +47,10 @@ const NewContactForm = () => {
       <div className='flex flex-col gap-7'>
         <div className='flex flex-col gap-3'>
           <label className='flex flex-col gap-3'>
-            <span className='text-small-thin'>Fullt navn test</span>
+            <span className='text-small-thin'>Full name</span>
             <input
               {...register('name')}
+              placeholder='Your name'
               className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
             />
           </label>
@@ -61,9 +62,10 @@ const NewContactForm = () => {
 
         <div className='flex flex-col gap-7'>
           <label className='flex flex-col gap-3'>
-            <span className='text-small-thin'>E-post</span>
+            <span className='text-small-thin'>Email</span>
             <input
               {...register('senderEmail')}
+              placeholder='Example@email.com'
               className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out'
             />
           </label>
@@ -75,10 +77,11 @@ const NewContactForm = () => {
 
         <div className='flex flex-col gap-7'>
           <label className='flex flex-col gap-3'>
-            <span className='text-small-thin'>Melding</span>
+            <span className='text-small-thin'>Message</span>
             <textarea
               {...register('message')}
-              rows={4}
+              placeholder='Type your message here..'
+              rows={8}
               className='w-full outline-none p-4 text-small-thin border border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all duration-300 ease-in-out resize-none'
             />
           </label>
@@ -92,7 +95,7 @@ const NewContactForm = () => {
           <p className='text-small-thin'>{feedbackMessage}</p>
         )}
 
-        <Button type='submit' pendingMessage='Sender..' className='self-end'>
+        <Button type='submit' pendingMessage='Sending..' className='self-end'>
           Send
         </Button>
       </div>
