@@ -47,7 +47,7 @@ const Navbar = () => {
                   pathname === '/' && 'text-gray-800 dark:text-gray-50'
                 } flex`}
               >
-                Home
+                HOME
               </Link>
             </div>
             <div className='flex'>
@@ -58,7 +58,7 @@ const Navbar = () => {
                   pathname === '/contact' && 'text-gray-800 dark:text-gray-50'
                 } flex`}
               >
-                Contact me
+                CONTACT ME
               </Link>
             </div>
           </div>
