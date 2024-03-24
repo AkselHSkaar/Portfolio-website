@@ -11,9 +11,9 @@ const page = () => {
               <h1 className='text-h6 sm:text-h5 md:text-h4 lg:text-h3 xl:text-h2 2xl:text-h1'>
                 CONTACT ME
               </h1>
-              <p className='text-gray-500 dark:text-gray-200 max-w-[21.375rem] md:max-w-full md:w-2/3 text-small-thin md:text-regular-thin lg:hidden'>
-                Do you have a cool idea? Drop me a message and I will get back
-                to you.
+              <p className='text-gray-500 dark:text-gray-300 max-w-[21.375rem] md:max-w-full md:w-2/3 text-small-thin md:text-regular-thin lg:hidden'>
+                Do you have a cool idea? Send me a message here and I will get
+                back to you as soon as I can.
               </p>
             </div>
           </div>
@@ -23,8 +23,8 @@ const page = () => {
         <Container>
           <div className='lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:pt-21 xl:pb-13 gap-7 xl:grid-cols-4'>
             <p className='hidden lg:block lg:col-span-2 text-regular-thin xl:col-span-1 pr-7 2xl:text-large-thin text-gray-500 dark:text-gray-200'>
-              Do you have a cool idea? Drop me a message and I will get back to
-              you.
+              Do you have a cool idea? Send me a message here and I will get
+              back to you as soon as I can.
             </p>
             <ContactForm />
           </div>

@@ -3,11 +3,14 @@
 import Link from 'next/link'
 import Container from './Container'
 import ArrowButton from '../ArrowButton'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  const pathname = usePathname()
 
   return (
     <footer className='pt-19 md:pt-21 lg:pt-23 xl:pt-27'>
@@ -26,10 +29,25 @@ const Footer = () => {
               <p className='font-normal'>GENERAL</p>
               <ul className='text-gray-400 dark:text-gray-300 flex flex-col gap-3'>
                 <li>
-                  <Link href='/'>ABOUT ME</Link>
+                  <Link
+                    href='/'
+                    className={`${
+                      pathname === '/' && 'text-gray-800 dark:text-gray-50'
+                    } flex`}
+                  >
+                    HOME
+                  </Link>
                 </li>
                 <li>
-                  <Link href='/'>CONTACT ME</Link>
+                  <Link
+                    href='/contact'
+                    className={`${
+                      pathname === '/contact' &&
+                      'text-gray-800 dark:text-gray-50'
+                    } flex`}
+                  >
+                    CONTACT ME
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -37,13 +55,17 @@ const Footer = () => {
               <p className='font-normal'>SOCIAL LINKS</p>
               <ul className='text-gray-400 dark:text-gray-300 flex flex-col gap-3'>
                 <li>
-                  <Link href='/'>GITHUB</Link>
+                  <Link href='https://github.com/AkselHSkaar' target='_blank'>
+                    GITHUB
+                  </Link>
                 </li>
                 <li>
-                  <Link href='/'>FIGMA</Link>
-                </li>
-                <li>
-                  <Link href='/'>LINKEDIN</Link>
+                  <Link
+                    href='https://linkedin.com/in/aksel-skaar-46785b174'
+                    target='_blank'
+                  >
+                    LINKEDIN
+                  </Link>
                 </li>
               </ul>
             </div>
