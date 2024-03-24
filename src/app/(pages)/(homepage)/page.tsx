@@ -13,7 +13,7 @@ export default function Home() {
                 HELLO, I&apos;M <br /> AKSEL SKAAR
               </h1>
               <p className='text-gray-500 dark:text-gray-300 max-w-[21.375rem] md:max-w-full md:w-2/3 lg:w-1/2 text-small-thin md:text-regular-thin lg:text-large-thin xl:text-huge-thin 2xl:text-xhuge-thin'>
-                I&apos;m a Oslo based UX/UI designer and web developer,
+                I&apos;m an Oslo based UX/UI designer and web developer,
                 currently working at Aboveit.
               </p>
             </div>
@@ -36,13 +36,15 @@ export default function Home() {
             </h2>
             <div className='col-span-5 flex flex-col gap-5 lg:gap-11 text-gray-500 dark:text-gray-300'>
               <p>
-                I have a bacehlors degree in technology & interaction design for
-                Kristiania University College (2022). While studying i also
-                worked as a freelance UX/UI designer.
+                I have a bachelor&apos;s degree in technology with
+                specialization in interactive design from Kristiania University
+                College (2022). While studying I also worked as a freelance
+                UX/UI designer.
               </p>
               <p className='mb-7 lg:mb-11'>
-                When i`m not working with design or tech, i play guitar and
-                produce music, go fishing or hang out with friends.
+                When I&apos;m not working on design or tech, I usually play
+                guitar or produce music. I also enjoy going fishing in the
+                wilderness with good friends.
               </p>
               <ArrowButton
                 type='link'
