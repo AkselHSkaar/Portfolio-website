@@ -13,7 +13,7 @@ const Footer = () => {
   const pathname = usePathname()
 
   return (
-    <footer className='pt-19 md:pt-21 lg:pt-23 xl:pt-27'>
+    <footer className='pt-19 md:pt-21 lg:pt-23 xl:pt-27 md:pb-5 lg:pb-7 xl:pb-11'>
       <Container>
         <div className='pb-15 md:pb-18 lg:pb-20 flex flex-col gap-7 sm:gap-9 lg:gap-11'>
           <h1 className='text-h6 sm:text-h5 md:text-h4 lg:text-h3 xl:text-h2 2xl:text-h1'>
