@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </Container>
       </header>
-      <Image src={banner} alt='' className='w-full aspect-video' />
+      <Image src={banner} priority alt='' className='w-full aspect-video' />
 
       {/* About section */}
       <section>
