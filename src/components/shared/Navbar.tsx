@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import ThemeSwitch from './ThemeSwitch'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,6 +62,9 @@ const Navbar = () => {
                 CONTACT ME
               </Link>
             </div>
+          </div>
+          <div className='place-self-end md:col-start-3 md:row-start-1 md:place-self-start md:justify-start lg:col-start-7 lg:col-span-2 xl:col-start-4 xl:col-span-1'>
+            <ThemeSwitch />
           </div>
         </div>
       )}
