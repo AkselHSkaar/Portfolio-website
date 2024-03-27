@@ -1,6 +1,7 @@
 import Container from '@/components/shared/Container'
 import ArrowButton from '@/components/ArrowButton'
 import Image from 'next/image'
+import banner from '@public/banner.jpg'
 
 export default function Home() {
   return (
@@ -23,9 +24,7 @@ export default function Home() {
           </div>
         </Container>
       </header>
-      <div className='relative w-full aspect-video'>
-        <Image src='/Banner.webp' alt='image' fill={true} />
-      </div>
+      <Image src={banner} alt='' className='w-full aspect-video' />
 
       {/* About section */}
       <section>
