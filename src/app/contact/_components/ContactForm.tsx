@@ -13,7 +13,7 @@ import {
 const NewContactForm = () => {
   const {
     register,
-    formState: { errors, isSubmitting },
+    formState: { errors },
     trigger,
     getValues,
     reset,

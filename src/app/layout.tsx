@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   title: 'Aksel Skaar',
   description: 'Portfolio for Aksel Skaar',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

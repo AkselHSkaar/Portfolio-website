@@ -1,7 +1,7 @@
 import Container from '@components/shared/Container'
 import ArrowButton from '@components/ArrowButton'
 import Image from 'next/image'
-import banner from '@public/banner.jpg'
+import banner from '@images/banner.jpg'
 
 export default function Home() {
   return (
