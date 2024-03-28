@@ -19,11 +19,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["/src/*"],
-      "@components": ["/src/components/index.ts"],
-      "@public/*": ["/public/*"],
-      "@actions/*": ["/src/actions/*"],
-      "@schemas/*": ["/src/schemas/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@public/*": ["./public/*"],
+      "@actions/*": ["./src/actions/*"],
+      "@schemas/*": ["./src/schemas/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

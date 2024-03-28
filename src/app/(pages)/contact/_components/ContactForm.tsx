@@ -2,13 +2,13 @@
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { sendEmailAction } from '@/actions/actions'
+import { sendEmailAction } from '@actions/actions'
 import { useState } from 'react'
-import Button from '@/components/Button'
+import Button from '@components/Button'
 import {
   contactFormSchema,
   TContactFormSchema,
-} from '@/schemas/contactFormSchema'
+} from '@schemas/contactFormSchema'
 
 const NewContactForm = () => {
   const {

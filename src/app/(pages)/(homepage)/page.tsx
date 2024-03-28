@@ -1,5 +1,5 @@
-import Container from '@/components/shared/Container'
-import ArrowButton from '@/components/ArrowButton'
+import Container from '@components/shared/Container'
+import ArrowButton from '@components/ArrowButton'
 import Image from 'next/image'
 import banner from '@public/banner.jpg'
 
