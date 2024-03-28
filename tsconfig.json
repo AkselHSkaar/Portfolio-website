@@ -24,7 +24,8 @@
       "@public/*": ["./public/*"],
       "@images/*": ["./public/images/*"],
       "@actions/*": ["./src/actions/*"],
-      "@schemas/*": ["./src/schemas/*"]
+      "@schemas/*": ["./src/schemas/*"],
+      "@email/*": ["./email/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

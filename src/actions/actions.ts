@@ -5,8 +5,8 @@ import { Resend } from 'resend'
 import {
   contactFormSchema,
   TContactFormSchema,
-} from '@/schemas/contactFormSchema'
-import ContactEmail from '../../email/ContactEmail'
+} from '@schemas/contactFormSchema'
+import ContactEmail from '@email/ContactEmail'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
