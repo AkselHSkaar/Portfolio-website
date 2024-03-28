@@ -26,7 +26,7 @@ The website is deployed to Microsoft Azure using GitHub Actions for continuous i
 
 1. **Containerization:** The website is containerized using Docker and stored in Azure Container Registry.
 2. **Deployment to Azure App Service:** Azure App Service is utilized to host the containerized application.
-3. **Automatic Updates:** With CI/CD configured through GitHub Actions, any changes pushed to the main branch trigger an automatic deployment process, ensuring that the latest version of the application is always available to users.
+3. **Automatic Updates:** With CI/CD configured through GitHub Actions, any changes pushed to the main branch trigger an automatic deployment process.
 
 ## :page_facing_up: Resources
 
