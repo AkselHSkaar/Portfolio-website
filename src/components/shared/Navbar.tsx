@@ -53,6 +53,17 @@ const Navbar = () => {
             </div>
             <div className='flex'>
               <Link
+                href='/about'
+                onClick={onClose}
+                className={`${
+                  pathname === '/about' && 'text-gray-800 dark:text-gray-50'
+                } flex`}
+              >
+                ABOUT ME
+              </Link>
+            </div>
+            <div className='flex'>
+              <Link
                 href='/contact'
                 onClick={onClose}
                 className={`${

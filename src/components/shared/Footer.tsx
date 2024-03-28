@@ -40,6 +40,16 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    href='/about'
+                    className={`${
+                      pathname === '/about' && 'text-gray-800 dark:text-gray-50'
+                    } flex`}
+                  >
+                    ABOUT ME
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href='/contact'
                     className={`${
                       pathname === '/contact' &&
