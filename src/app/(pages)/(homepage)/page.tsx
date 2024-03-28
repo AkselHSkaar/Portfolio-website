@@ -35,15 +35,14 @@ export default function Home() {
             </h2>
             <div className='col-span-5 flex flex-col gap-5 lg:gap-11 text-gray-500 dark:text-gray-300'>
               <p>
-                I have a bachelor&apos;s degree in technology with
-                specialization in interactive design from Kristiania University
-                College (2022). While studying I also worked as a freelance
-                UX/UI designer.
+                I graduated with a bachelor&apos;s degree in Information
+                Technology, specializing in Interactive Design from Kristiania
+                University College in 2022. During my studies, I also worked as
+                a freelance UX/UI designer.
               </p>
               <p className='mb-7 lg:mb-11'>
-                When I&apos;m not working on design or tech, I usually play
-                guitar or produce music. I also enjoy going fishing in the
-                wilderness with good friends.
+                When I&apos;m not working on design or tech stuff, I like to
+                play guitar and produce music.
               </p>
               <ArrowButton
                 type='link'
