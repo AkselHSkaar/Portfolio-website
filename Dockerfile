@@ -40,5 +40,3 @@ COPY --from=builder /app ./
 EXPOSE 4000
 
 CMD ["pnpm", "run", "start"]
-
-# docker build -f Dockerfile -t portfolio .
