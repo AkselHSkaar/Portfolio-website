@@ -2,6 +2,8 @@ import Container from '@components/shared/Container'
 import ArrowButton from '@components/ArrowButton'
 import Image from 'next/image'
 import banner from '@public/banner.jpg'
+import { ProjectsData } from '@data/projectsData'
+import ProjectsItem from './_components/ProjectsItem'
 
 export default function Home() {
   return (
@@ -52,6 +54,17 @@ export default function Home() {
                 WHAT IM LISTENING TO
               </ArrowButton>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Projects section */}
+      <section>
+        <Container>
+          <div className='flex flex-col gap-15 lg:gap-20 xl:gap-23 2xl:gap-26'>
+            {ProjectsData.map((project) => (
+              <ProjectsItem key={project.id} data={project} />
+            ))}
           </div>
         </Container>
       </section>
