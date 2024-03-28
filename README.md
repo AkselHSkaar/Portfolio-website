@@ -16,6 +16,7 @@ Visit the [live site](https://akselskaar.no/)
 - Next.js 14 with the app router
 - TypeScript
 - Tailwind CSS
+- Azure
 - Resend for contact emails (with react-emails)
 - React hook form & zod for forms and validation
 - Chadcn/ui component liberary
