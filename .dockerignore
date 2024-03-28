@@ -5,6 +5,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# node
+node_modules
+
+# git
+.git
+.gitignore
+
+# Next.js build output
+.next
+out
+
 # dotenv environment variables file
 .env.local
 
@@ -24,10 +35,6 @@ yarn-error.log*
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .dist
-
-# Next.js build output
-.next
-out
 
 # Rollup build output
 dist/

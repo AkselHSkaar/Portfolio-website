@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import ThemeSwitch from './ThemeSwitch'
 import { usePathname } from 'next/navigation'
+import ThemeSwitch from './ThemeSwitch'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -42,24 +42,28 @@ const Navbar = () => {
           <div className='flex flex-col gap-7 md:col-start-2 md:row-start-1 md:col-span-2 lg:col-start-3 xl:col-start-2 text-gray-400'>
             <div className='flex'>
               <Link
-                href='/about'
+                href='/'
                 onClick={onClose}
-                className={`${pathname === '/about' && 'text-gray-800'}`}
+                className={`${
+                  pathname === '/' && 'text-gray-800 dark:text-gray-50'
+                } flex`}
               >
-                About me
+                HOME
               </Link>
             </div>
             <div className='flex'>
               <Link
                 href='/contact'
                 onClick={onClose}
-                className={`${pathname === '/contact' && 'text-gray-800'} flex`}
+                className={`${
+                  pathname === '/contact' && 'text-gray-800 dark:text-gray-50'
+                } flex`}
               >
-                Contact me
+                CONTACT ME
               </Link>
             </div>
           </div>
-          <div className='flex justify-end md:justify-normal md:col-start-3 md:row-start-1 lg:col-start-6 xl:col-start-4'>
+          <div className='place-self-end md:col-start-3 md:row-start-1 md:place-self-start md:justify-start lg:col-start-7 lg:col-span-2 xl:col-start-4 xl:col-span-1'>
             <ThemeSwitch />
           </div>
         </div>

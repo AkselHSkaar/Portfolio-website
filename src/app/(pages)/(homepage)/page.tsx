@@ -1,8 +1,7 @@
-import Container from '@/components/shared/Container'
-import ArrowButton from '@/components/ArrowButton'
+import Container from '@components/shared/Container'
+import ArrowButton from '@components/ArrowButton'
 import Image from 'next/image'
-import { ProjectsData } from '@/data/projectsData'
-import ProjectsItem from './_components/ProjectsItem'
+import banner from '@public/banner.jpg'
 
 export default function Home() {
   return (
@@ -14,8 +13,8 @@ export default function Home() {
               <h1 className='text-h6 sm:text-h5 md:text-h4 lg:text-h3 xl:text-h2 2xl:text-h1'>
                 HELLO, I&apos;M <br /> AKSEL SKAAR
               </h1>
-              <p className='text-gray-500 dark:text-gray-200 max-w-[21.375rem] md:max-w-full md:w-2/3 lg:w-1/2 text-small-thin md:text-regular-thin lg:text-large-thin xl:text-huge-thin 2xl:text-xhuge-thin'>
-                I&apos;m a Oslo based UX/UI designer and web developer,
+              <p className='text-gray-500 dark:text-gray-300 max-w-[21.375rem] md:max-w-full md:w-2/3 lg:w-1/2 text-small-thin md:text-regular-thin lg:text-large-thin xl:text-huge-thin 2xl:text-xhuge-thin'>
+                I&apos;m an Oslo based UX/UI designer and web developer,
                 currently working at Aboveit.
               </p>
             </div>
@@ -25,9 +24,7 @@ export default function Home() {
           </div>
         </Container>
       </header>
-      <div className='relative w-full aspect-video'>
-        <Image src='/Banner.webp' alt='image' fill={true} />
-      </div>
+      <Image src={banner} priority alt='' className='w-full aspect-video' />
 
       {/* About section */}
       <section>
@@ -36,15 +33,16 @@ export default function Home() {
             <h2 className='text-small-regular md:text-regular-regular lg:text-medium-regular xl:text-medium-regular 2xl:text-xlarge-regular col-span-2'>
               (ABOUT ME)
             </h2>
-            <div className='col-span-5 flex flex-col gap-5 lg:gap-11 text-gray-500 dark:text-gray-200'>
+            <div className='col-span-5 flex flex-col gap-5 lg:gap-11 text-gray-500 dark:text-gray-300'>
               <p>
-                I have a bacehlors degree in technology & interaction design for
-                Kristiania University College (2022). While studying i also
-                worked as a freelance UX/UI designer.
+                I graduated with a bachelor&apos;s degree in Information
+                Technology, specializing in Interactive Design from Kristiania
+                University College in 2022. During my studies, I also worked as
+                a freelance UX/UI designer.
               </p>
               <p className='mb-7 lg:mb-11'>
-                When i`m not working with design or tech, i play guitar and
-                produce music, go fishing or hang out with friends.
+                When I&apos;m not working on design or tech stuff, I like to
+                play guitar and produce music.
               </p>
               <ArrowButton
                 type='link'
@@ -54,17 +52,6 @@ export default function Home() {
                 WHAT IM LISTENING TO
               </ArrowButton>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Projects section */}
-      <section>
-        <Container>
-          <div className='flex flex-col gap-15 lg:gap-20 xl:gap-23 2xl:gap-26'>
-            {ProjectsData.map((project) => (
-              <ProjectsItem key={project.id} data={project} />
-            ))}
           </div>
         </Container>
       </section>

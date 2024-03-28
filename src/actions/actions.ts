@@ -26,7 +26,7 @@ export const sendEmailAction = async (
 
   try {
     await resend.emails.send({
-      from: `Ny melding fra ${name} <hei@akselskaar.no>`,
+      from: `Ny melding fra ${name} <hello@akselskaar.no>`,
       to: 'akselhskaar@hotmail.no',
       subject: `Ny melding fra kontakt skjema på akselskaar.no`,
       reply_to: senderEmail,

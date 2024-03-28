@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { Switch } from '@/components/ui/switch'
+import { Label } from '@/components/ui/label'
 
 type Theme = 'dark' | 'light' | null
 
@@ -32,11 +34,13 @@ export default function ThemeSwitch() {
   }
 
   return (
-    <div>
-      <div onClick={toggleDarkMode} className='cursor-pointer'>
-        {theme === 'dark' ? 'darkmode' : null}
-        {theme === 'light' ? 'lightmode' : null}
-      </div>
+    <div className='flex gap-3 items-center'>
+      <Switch
+        id='darkmode-switch'
+        checked={theme === 'dark' ? true : false}
+        onCheckedChange={toggleDarkMode}
+      />
+      <Label htmlFor='darkmode-switch'>DARK MODE</Label>
     </div>
   )
 }

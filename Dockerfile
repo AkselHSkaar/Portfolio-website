@@ -2,7 +2,6 @@ FROM node:20-alpine as builder
 
 #ENV
 ARG RESEND_API_KEY
-ARG OPENAI_API_KEY
 
 WORKDIR /app
 
@@ -23,9 +22,7 @@ FROM node:20-alpine
 
 #ENV
 ARG RESEND_API_KEY
-ARG OPENAI_API_KEY
 ENV RESEND_API_KEY=$RESEND_API_KEY
-ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -40,5 +37,3 @@ COPY --from=builder /app ./
 EXPOSE 4000
 
 CMD ["pnpm", "run", "start"]
-
-# docker build -f Dockerfile -t portfolio .
