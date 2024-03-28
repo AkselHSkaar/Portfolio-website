@@ -37,4 +37,5 @@ The website is deployed to Microsoft Azure using GitHub Actions for continuous i
 - [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/)
 
 <hr />
+
 Copyright :copyright: [Aksel Skaar](https://github.com/AkselHSkaar)
