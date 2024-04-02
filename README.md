@@ -16,7 +16,8 @@ Visit the [live site](https://akselskaar.no/)
 - Next.js 14 with the app router
 - TypeScript
 - Tailwind CSS
-- Azure
+- Azure App Service & Azure Container Registry
+- Docker
 - Resend for contact emails (with react-emails)
 - React hook form & zod for forms and validation
 - Chadcn/ui component liberary
@@ -32,10 +33,11 @@ The website is deployed to Microsoft Azure using GitHub Actions for continuous i
 ## :page_facing_up: Resources
 
 - [Github repo](https://github.com/AkselHSkaar/my-portfolio)
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Tailwind Documentation](https://tailwindcss.com/)
-- [Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/)
-- [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/)
+- [Next.js documentation](https://nextjs.org/docs)
+- [Tailwind documentation](https://tailwindcss.com/)
+- [Azure App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
+- [Azure Container Registry documentation](https://learn.microsoft.com/en-us/azure/container-registry/)
+- [Chadcn/ui website](https://ui.shadcn.com/)
 
 <hr />
 
