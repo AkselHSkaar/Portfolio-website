@@ -32,7 +32,7 @@ The website is deployed to Microsoft Azure using GitHub Actions for continuous i
 
 ## :page_facing_up: Resources
 
-- [Github repo](https://github.com/AkselHSkaar/my-portfolio)
+- [Github repo](https://github.com/akselskaar/Portfolio-website)
 - [Next.js documentation](https://nextjs.org/docs)
 - [Tailwind documentation](https://tailwindcss.com/)
 - [Azure App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
@@ -41,4 +41,4 @@ The website is deployed to Microsoft Azure using GitHub Actions for continuous i
 
 <hr />
 
-Copyright :copyright: [Aksel Skaar](https://github.com/AkselHSkaar)
+Copyright :copyright: [Aksel Skaar](https://github.com/AkselSkaar)

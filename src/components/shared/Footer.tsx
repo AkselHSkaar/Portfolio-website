@@ -55,7 +55,7 @@ const Footer = () => {
               <p className='font-normal'>SOCIAL LINKS</p>
               <ul className='text-gray-400 dark:text-gray-300 flex flex-col gap-3'>
                 <li>
-                  <Link href='https://github.com/AkselHSkaar' target='_blank'>
+                  <Link href='https://github.com/AkselSkaar' target='_blank'>
                     GITHUB
                   </Link>
                 </li>
