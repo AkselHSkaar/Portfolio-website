@@ -1,18 +1,13 @@
-/** @type {import('next').NextConfig} */ 
+/** @type {import('next').NextConfig} */
 
 const nextConfig = {
   async redirects() {
     return [
       {
         source: '/:path*',
-        destination: 'https://www.akselskaar.no/:path*',
+        has: [{ type: 'host', value: 'www.akselskaar.no' }],
+        destination: 'https://akselskaar.no/:path*',
         permanent: true,
-        has: [
-          {
-            type: 'host',
-            value: 'akselskaar.no',
-          },
-        ],
       },
     ]
   },
