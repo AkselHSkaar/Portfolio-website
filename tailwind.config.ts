@@ -22,6 +22,9 @@ const config: Config = {
         50: '#F9F9F9',
         0: '#FFFFFF',
       },
+      red: {
+        500: '#dc2626',
+      },
     },
     fontSize: {
       // tiny
