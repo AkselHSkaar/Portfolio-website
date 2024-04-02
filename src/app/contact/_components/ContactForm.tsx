@@ -43,6 +43,7 @@ const NewContactForm = () => {
         }
       }}
       className='lg:col-span-5 xl:col-span-2'
+      autoComplete='on'
     >
       <div className='flex flex-col gap-7'>
         <div className='flex flex-col gap-3'>
