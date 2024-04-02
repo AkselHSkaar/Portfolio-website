@@ -18,7 +18,7 @@ export const sendEmailAction = async (
 
   if (!validatedContactSubmission.success) {
     return {
-      message: 'Invalid email',
+      message: 'Invalid submission. Please try again.',
     }
   }
 
