@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   title: 'Aksel Skaar',
   description:
-    'Hello, Im Aksel Skaar. Im an Oslo based UX/UI designer and web developer, currently working at Aboveit',
+    "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
   icons: {
     icon: '/favicon.ico',
   },

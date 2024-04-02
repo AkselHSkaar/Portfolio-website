@@ -54,6 +54,7 @@ const NewContactForm = () => {
               {...register('name')}
               className='w-full outline-none rounded-none p-4 text-small-thin border border-gray-900 bg-gray-50 dark:bg-gray-800 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-400 placeholder:text-gray-500 transition-all duration-300 ease-in-out'
               placeholder='John Doe'
+              autoComplete='name'
             />
           </label>
 
@@ -71,6 +72,7 @@ const NewContactForm = () => {
               {...register('senderEmail')}
               className='w-full outline-none p-4 rounded-none text-small-thin border border-gray-900 bg-gray-50 dark:bg-gray-800 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-400 placeholder:text-gray-500 transition-all duration-300 ease-in-out'
               placeholder='example@email.com'
+              autoComplete='email'
             />
           </label>
 
