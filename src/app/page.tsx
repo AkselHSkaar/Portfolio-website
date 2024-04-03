@@ -1,6 +1,5 @@
 import { Container, ArrowButton } from '@/components'
 import Image from 'next/image'
-import banner from '@/images/banner.jpg'
 
 export default function Home() {
   return (
@@ -23,7 +22,14 @@ export default function Home() {
           </div>
         </Container>
       </header>
-      <Image src={banner} priority alt='' className='w-full aspect-video' />
+      <div className='w-full aspect-video relative'>
+        <Image
+          src='https://akselskaar.blob.core.windows.net/portfolio/images/banner.jpg'
+          fill={true}
+          priority
+          alt=''
+        />
+      </div>
 
       {/* About section */}
       <section>

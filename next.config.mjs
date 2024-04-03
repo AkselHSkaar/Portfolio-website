@@ -11,6 +11,16 @@ const nextConfig = {
       },
     ]
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'akselskaar.blob.core.windows.net',
+        port: '',
+        pathname: '/portfolio/**',
+      },
+    ],
+  },
 }
 
 export default nextConfig
