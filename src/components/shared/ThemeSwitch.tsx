@@ -1,8 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Switch } from '@components/ui/switch'
-import { Label } from '@components/ui/label'
+import { Switch, Label } from '@/components'
 
 type Theme = 'dark' | 'light' | null
 

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Container from './Container'
-import ArrowButton from '@components/ArrowButton'
+import { ArrowButton } from '@/components'
 import { usePathname } from 'next/navigation'
 
 const Footer = () => {

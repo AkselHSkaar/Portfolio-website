@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import ThemeSwitch from './ThemeSwitch'
+import { ThemeSwitch } from '@/components'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

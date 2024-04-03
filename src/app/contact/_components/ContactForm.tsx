@@ -1,8 +1,5 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { sendEmailAction } from '@actions/actions'
 import {
   FormControl,
   FormField,
@@ -10,18 +7,18 @@ import {
   FormLabel,
   Form,
   FormMessage,
-  FormDescription,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-// import Button from '@components/Button'
+  Input,
+  Textarea,
+  Button,
+} from '@/components'
 import {
   contactFormSchema,
   TContactFormSchema,
-} from '@schemas/contactFormSchema'
-// import { Checkbox } from '@radix-ui/react-checkbox'
+} from '@/schemas/contactFormSchema'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { contactFormAction } from '@/actions/contactFormAction'
+import { useState } from 'react'
 
 const NewContactForm = () => {
   const form = useForm<TContactFormSchema>({
@@ -31,7 +28,6 @@ const NewContactForm = () => {
       name: '',
       senderEmail: '',
       message: '',
-      // accepted: false,
     },
   })
 
@@ -41,7 +37,7 @@ const NewContactForm = () => {
     <Form {...form}>
       <form
         action={async () => {
-          const result = await sendEmailAction(form.getValues())
+          const result = await contactFormAction(form.getValues())
           setFeedbackMessage(result.message)
 
           if (result.reset) {
@@ -105,21 +101,6 @@ const NewContactForm = () => {
               </FormItem>
             )}
           />
-          {/* <FormField
-            control={form.control}
-            name='accepted'
-            render={({ field }) => (
-              <FormItem className='flex flex-row gap-7'>
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                  />
-                </FormControl>
-                <FormLabel>I accept the privacy policy</FormLabel>
-              </FormItem>
-            )}
-          /> */}
 
           {feedbackMessage && (
             <p className='text-small-thin'>{feedbackMessage}</p>
