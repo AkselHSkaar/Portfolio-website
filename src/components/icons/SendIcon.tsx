@@ -1,8 +1,6 @@
-type SendProps = {
-  className?: string
-}
+import { Icon } from '@/types/Icon'
 
-const SendIcon = ({ className }: SendProps) => {
+const SendIcon = ({ className }: Icon) => {
   return (
     <svg
       width='16'

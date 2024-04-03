@@ -1,8 +1,6 @@
-type ExternalLinkProps = {
-  className?: string
-}
+import { Icon } from '@/types/Icon'
 
-export const ExternalLink = ({ className }: ExternalLinkProps) => {
+const ExternalLink = ({ className }: Icon) => {
   return (
     <svg
       width='16'
@@ -16,3 +14,5 @@ export const ExternalLink = ({ className }: ExternalLinkProps) => {
     </svg>
   )
 }
+
+export default ExternalLink
