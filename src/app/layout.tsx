@@ -2,18 +2,70 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
-import Navbar from '@components/shared/Navbar'
-import Footer from '@components/shared/Footer'
+import { Navbar, Footer } from '@/components'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Aksel Skaar',
+  title: {
+    default: 'Aksel Skaar',
+    template: '%s | Aksel Skaar',
+  },
   description:
     "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+    shortcut: '/icon.png',
   },
+  applicationName: 'Aksel Skaar',
+  keywords: [
+    'Aksel Skaar',
+    'Aksel',
+    'Skaar',
+    'UX designer',
+    'UI designer',
+    'UX / UI',
+    'ux',
+    'ui',
+    'design',
+    'designer',
+    'web developer',
+    'web design',
+    'web development',
+    'web',
+    'next.js',
+    'react',
+    'javascript',
+    'typescript',
+    'tailwindcss',
+    'tailwind',
+    'css',
+    'html',
+    'figma',
+    'IT',
+    'technology',
+    'tech',
+    'technology consultant',
+    'consultant',
+  ],
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: true,
+  },
+  metadataBase: new URL('https://akselskaar.no/'),
+  openGraph: {
+    title: 'Aksel Skaar',
+    description:
+      "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
+    url: 'https://akselskaar.no',
+    siteName: 'Aksel Skaar',
+    locale: 'no_NO',
+    type: 'website',
+  },
+  category: 'technology',
 }
 
 export default function RootLayout({

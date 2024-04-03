@@ -1,8 +1,6 @@
-type ArrowUpProps = {
-  className?: string
-}
+import { Icon } from '@/types/Icon'
 
-const ArrowUp = ({ className }: ArrowUpProps) => {
+const ArrowUp = ({ className }: Icon) => {
   return (
     <svg
       width='16'

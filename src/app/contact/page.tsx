@@ -1,4 +1,4 @@
-import Container from '@components/shared/Container'
+import { Container } from '@/components'
 import ContactForm from './_components/ContactForm'
 
 const page = () => {
