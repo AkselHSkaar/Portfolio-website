@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   description:
     "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
   icons: {
-    icon: '/favicon.ico',
-    // apple: '/icons/apple-icon.png',
-    // shortcut: '/icons/favicon.ico',
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+    shortcut: '/icon.png',
   },
   applicationName: 'Aksel Skaar',
   keywords: [
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     'tailwindcss',
     'tailwind',
     'css',
+    'html',
     'figma',
     'IT',
     'technology',
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: true,
   },
+  metadataBase: new URL('https://akselskaar.no/'),
   openGraph: {
     title: 'Aksel Skaar',
     description:
