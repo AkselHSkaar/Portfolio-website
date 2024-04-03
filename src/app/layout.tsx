@@ -8,12 +8,63 @@ import Footer from '@components/shared/Footer'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Aksel Skaar',
+  title: {
+    default: 'Aksel Skaar',
+    template: '%s | Aksel Skaar',
+  },
   description:
     "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
   icons: {
     icon: '/favicon.ico',
+    // apple: '/icons/apple-icon.png',
+    // shortcut: '/icons/favicon.ico',
   },
+  applicationName: 'Aksel Skaar',
+  keywords: [
+    'Aksel Skaar',
+    'Aksel',
+    'Skaar',
+    'UX designer',
+    'UI designer',
+    'UX / UI',
+    'ux',
+    'ui',
+    'design',
+    'designer',
+    'web developer',
+    'web design',
+    'web development',
+    'web',
+    'next.js',
+    'react',
+    'javascript',
+    'typescript',
+    'tailwindcss',
+    'tailwind',
+    'css',
+    'figma',
+    'IT',
+    'technology',
+    'tech',
+    'technology consultant',
+    'consultant',
+  ],
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: true,
+  },
+  openGraph: {
+    title: 'Aksel Skaar',
+    description:
+      "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
+    url: 'https://akselskaar.no',
+    siteName: 'Aksel Skaar',
+    locale: 'no_NO',
+    type: 'website',
+  },
+  category: 'technology',
 }
 
 export default function RootLayout({
