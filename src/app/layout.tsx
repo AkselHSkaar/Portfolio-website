@@ -7,6 +7,13 @@ import { Navbar, Footer } from '@/components'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://akselskaar.no'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/',
+    },
+  },
   title: {
     default: 'Aksel Skaar',
     template: '%s | Aksel Skaar',
@@ -55,7 +62,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: true,
   },
-  metadataBase: new URL('https://akselskaar.no/'),
   openGraph: {
     title: 'Aksel Skaar',
     description:
