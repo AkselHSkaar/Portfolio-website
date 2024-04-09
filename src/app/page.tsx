@@ -25,9 +25,12 @@ export default function Home() {
       <div className='w-full aspect-video relative'>
         <Image
           src='https://akselskaar.blob.core.windows.net/portfolio/images/banner.jpg'
-          fill={true}
+          sizes='100vw'
+          quality={100}
+          fill
           priority
           alt=''
+          style={{ objectFit: 'cover' }}
         />
       </div>
 
