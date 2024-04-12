@@ -5,17 +5,14 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { buildConfig } from 'payload/config'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
-
-import { Users } from './collections/Users'
+import { Users, Pages, Media } from './collections'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
   editor: lexicalEditor(),
-
-  collections: [Users],
-
+  collections: [Users, Pages, Media],
   secret: process.env.PAYLOAD_SECRET || '',
 
   typescript: {
