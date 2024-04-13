@@ -1,9 +1,13 @@
+import { TwoColumn, Hero } from '@/blocks'
 import type { CollectionConfig } from 'payload/types'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
   admin: {
     useAsTitle: 'title',
+  },
+  access: {
+    read: () => true,
   },
   fields: [
     {
@@ -15,8 +19,9 @@ export const Pages: CollectionConfig = {
       type: 'text',
     },
     {
-      name: 'content',
-      type: 'richText',
+      name: 'layout',
+      type: 'blocks',
+      blocks: [Hero, TwoColumn],
     },
   ],
 }
