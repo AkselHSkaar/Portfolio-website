@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+const { withPlausibleProxy } = require('next-plausible')
 
-const nextConfig = {
+const nextConfig = withPlausibleProxy()({
   async redirects() {
     return [
       {
@@ -21,6 +22,6 @@ const nextConfig = {
       },
     ],
   },
-}
+})
 
 export default nextConfig

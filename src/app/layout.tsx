@@ -3,6 +3,7 @@ import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import { Navbar, Footer } from '@/components'
+import PlausibleProvider from 'next-plausible'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -93,10 +94,10 @@ export default function RootLayout({
         `,
           }}
         />
-        <Script
-          defer
-          data-domain='akselskaar.no'
-          src='https://plausible.io/js/script.js'
+        <PlausibleProvider
+          domain='akselskaar.no'
+          trackOutboundLinks={true}
+          taggedEvents={true}
         />
       </head>
       <body
