@@ -23,6 +23,7 @@ import { usePlausible } from 'next-plausible'
 
 const NewContactForm = () => {
   const plausible = usePlausible()
+
   const form = useForm<TContactFormSchema>({
     resolver: zodResolver(contactFormSchema),
     mode: 'onBlur',
@@ -33,6 +34,11 @@ const NewContactForm = () => {
     },
   })
 
+  // Track form interaction
+  if (form.formState.isDirty) {
+    plausible('contactFormInteraction')
+  }
+
   const [feedbackMessage, setFeedbackMessage] = useState<string>()
 
   return (
@@ -42,8 +48,10 @@ const NewContactForm = () => {
           const result = await contactFormAction(form.getValues())
           setFeedbackMessage(result.message)
 
+          // Resets form if successful & tracs successful form submission
           if (result.reset) {
             form.reset()
+            plausible('contactSubmitSuccess')
           }
         }}
         className='lg:col-span-5 xl:col-span-2'
@@ -108,11 +116,7 @@ const NewContactForm = () => {
             <p className='text-small-thin'>{feedbackMessage}</p>
           )}
 
-          <Button
-            type='submit'
-            className='self-end'
-            onClick={() => plausible('contactSubmition')}
-          >
+          <Button type='submit' className='self-end'>
             Send
           </Button>
         </div>
