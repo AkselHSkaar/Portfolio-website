@@ -1,7 +1,10 @@
 import { Container, ArrowButton } from '@/components'
 import Image from 'next/image'
+import { usePlausible } from 'next-plausible'
 
 export default function Home() {
+  const plausible = usePlausible()
+
   return (
     <>
       <header className='py-section-xs md:py-section-md lg:py-section-lg xl:py-section-xl 2xl:py-section-2xl'>
@@ -56,6 +59,7 @@ export default function Home() {
                 type='link'
                 href='https://open.spotify.com/playlist/2YnEuuOS6ehzCp3XjdSOj3?si=6a6d4d7905dc48a3'
                 external
+                onClick={() => plausible('visitsSpotifyPlaylist')}
               >
                 WHAT IM LISTENING TO
               </ArrowButton>
