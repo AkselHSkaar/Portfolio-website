@@ -19,8 +19,10 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactFormAction } from '@/actions/contactFormAction'
 import { useState } from 'react'
+import { usePlausible } from 'next-plausible'
 
 const NewContactForm = () => {
+  const plausible = usePlausible()
   const form = useForm<TContactFormSchema>({
     resolver: zodResolver(contactFormSchema),
     mode: 'onBlur',
@@ -106,7 +108,11 @@ const NewContactForm = () => {
             <p className='text-small-thin'>{feedbackMessage}</p>
           )}
 
-          <Button type='submit' className='self-end'>
+          <Button
+            type='submit'
+            className='self-end'
+            onClick={() => plausible('contactSubmition')}
+          >
             Send
           </Button>
         </div>

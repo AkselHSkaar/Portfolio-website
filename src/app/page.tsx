@@ -1,7 +1,7 @@
 import { Container, ArrowButton } from '@/components'
 import Image from 'next/image'
 
-export default function Home() {
+const HomePage = () => {
   return (
     <>
       <header className='py-section-xs md:py-section-md lg:py-section-lg xl:py-section-xl 2xl:py-section-2xl'>
@@ -66,3 +66,5 @@ export default function Home() {
     </>
   )
 }
+
+export default HomePage
