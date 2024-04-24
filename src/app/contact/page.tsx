@@ -17,10 +17,34 @@ export const metadata: Metadata = {
     title: 'Contact me | Aksel Skaar',
     description:
       'Do you have a cool idea? Send me a message and I will get back to you as soon as I can.',
-    url: 'https://akselskaar.no',
+    url: 'https://akselskaar.no/contact',
     siteName: 'Aksel Skaar',
     locale: 'no_NO',
     type: 'website',
+    images: [
+      {
+        url: 'https://akselskaar.blob.core.windows.net/portfolio/images/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Aksel Skaar',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'Aksel Skaar',
+    title: 'Contact me | Aksel Skaar',
+    description:
+      'Do you have a cool idea? Send me a message and I will get back to you as soon as I can.',
+    creator: 'Aksel Skaar',
+    images: [
+      {
+        url: 'https://akselskaar.blob.core.windows.net/portfolio/images/twitter-image.jpg',
+        width: 1200,
+        height: 675,
+        alt: 'Aksel Skaar',
+      },
+    ],
   },
 }
 

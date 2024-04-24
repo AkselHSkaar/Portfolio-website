@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import { Navbar, Footer } from '@/components'
@@ -31,31 +30,18 @@ export const metadata: Metadata = {
     'Aksel Skaar',
     'Aksel',
     'Skaar',
+    'Oslo',
+    'Aboveit',
+    'UX designer fra Oslo',
+    'Nettside utvikler fra Oslo',
+    'IT konsulent',
+    'Webdesigner',
     'UX designer',
     'UI designer',
-    'UX / UI',
-    'ux',
-    'ui',
-    'design',
-    'designer',
     'web developer',
-    'web design',
-    'web development',
-    'web',
-    'next.js',
-    'react',
-    'javascript',
-    'typescript',
-    'tailwindcss',
-    'tailwind',
-    'css',
-    'html',
-    'figma',
-    'IT',
+    'Utvikler',
+    'Webutvikler',
     'technology',
-    'tech',
-    'technology consultant',
-    'consultant',
   ],
   referrer: 'origin-when-cross-origin',
   formatDetection: {
@@ -71,6 +57,30 @@ export const metadata: Metadata = {
     siteName: 'Aksel Skaar',
     locale: 'no_NO',
     type: 'website',
+    images: [
+      {
+        url: 'https://akselskaar.blob.core.windows.net/portfolio/images/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Aksel Skaar',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'Aksel Skaar',
+    title: 'Aksel Skaar',
+    description:
+      "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
+    creator: 'Aksel Skaar',
+    images: [
+      {
+        url: 'https://akselskaar.blob.core.windows.net/portfolio/images/twitter-image.jpg',
+        width: 1200,
+        height: 675,
+        alt: 'Aksel Skaar',
+      },
+    ],
   },
   category: 'technology',
 }
