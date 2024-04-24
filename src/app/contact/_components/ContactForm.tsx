@@ -66,7 +66,7 @@ const NewContactForm = () => {
                 <FormLabel>Full name</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder='Navn Etternavn'
+                    placeholder='Firstname Lastname'
                     {...field}
                     autoComplete='name'
                   />
