@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: '%s | Aksel Skaar',
   },
   description:
-    "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit",
+    "Hello, I'm Aksel Skaar. I'm an Oslo based UX/UI designer and web developer, currently working at Aboveit. Check out my portfolio webpage to see some of my work, and to send me a message.",
   icons: {
     icon: '/icon.png',
     apple: '/apple-icon.png',
@@ -30,8 +30,9 @@ export const metadata: Metadata = {
     'Aksel Skaar',
     'Aksel',
     'Skaar',
+    'Protfolio nettside for Aksel Skaar',
+    'Aksel H Skaar',
     'Oslo',
-    'Aboveit',
     'UX designer fra Oslo',
     'Nettside utvikler fra Oslo',
     'IT konsulent',
