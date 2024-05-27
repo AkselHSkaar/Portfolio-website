@@ -18,9 +18,9 @@ Visit the [live site](https://akselskaar.no/)
 - Tailwind CSS
 - Azure App Service & Azure Container Registry
 - Docker
-- Resend for contact emails (with react-emails)
-- React hook form & zod for forms and validation
-- Chadcn/ui component liberary
+- Resend & react-emails
+- React hook form & zod
+- Chadcn/ui
 
 ## :cloud: Deplyment
 
